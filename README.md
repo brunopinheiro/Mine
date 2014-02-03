@@ -10,45 +10,50 @@ Version
 
 Installation
 -----
-You can add the project to your solution, and then add a reference to it. Or you can just add all the code files into your main project.
+You can add the project to your solution and then add a reference to it. Or you can just add all the code files into your main project.
 
-Now, you should modify your Game1.cs file
+Modify your Game1.cs
+
 ```````c#
+//Game1.cs
 
 using Mine;
 
-public Game1() {
-    this.Content.RootDirectory = "YOUR CONTENT ROOT DIRECTORY";
-    MyCore.CreateCore(this);
-    MyCanvas.Instance.VirtualResolution = new Vector2(1280,720);
-    MyCanvas.Instance.Resolution = new Vector2(1280,720);
-    MyCanvas.Instance.FullScreen = false;
-}
+public class Game1 : Game {
 
-protected override void Initialize() {
-    MyCore.Instance.Initialize();
-    base.Initialize();
-}
+    public Game1() {
+        this.Content.RootDirectory = "YOUR CONTENT ROOT DIRECTORY";
+        MyCore.CreateCore(this);
+        MyCanvas.Instance.VirtualResolution = new Vector2(1280,720);
+        MyCanvas.Instance.Resolution = new Vector2(1280,720);
+        MyCanvas.Instance.FullScreen = false;
+    }
 
-protected override void LoadContent() {
-    MyDirector.Instance.OpenScene(new FIRST_SCENE());
-}
+    protected override void Initialize() {
+        MyCore.Instance.Initialize();
+        base.Initialize();
+    }
+
+    protected override void LoadContent() {
+        MyDirector.Instance.OpenScene(new FIRST_SCENE());
+    }
 
 
-protected override void Update(GameTime gameTime) {
-    MyCore.Instance.Update(gameTime);
-    base.Update(gameTime);
-}
+    protected override void Update(GameTime gameTime) {
+        MyCore.Instance.Update(gameTime);
+        base.Update(gameTime);
+    }
 
-protected override void Draw(GameTime gameTime) {
-    MyCanvas.Instance.Draw();
-    base.Draw(gameTime);
+    protected override void Draw(GameTime gameTime) {
+        MyCanvas.Instance.Draw();
+        base.Draw(gameTime);
+    }
 }
 
 ```````
 
 
-How to use
+Getting Started
 -------
 
 ````````c#
@@ -69,8 +74,8 @@ public class NewScene : MyScene {
 MyDirector.Instance.OpenScene(new NewScene());
 
 ````````
-This code above you make your NewScene be loaded and rendered on the screen.
-Inside the Load method, it was created a MySprite instance. MySprite is the class responsable for store all the data needed to render a Texture2D on screen. In this case, the instance is named "Mario" and has the Texture2D from file "Resources/Characters/mario".
+In this code above, we are making your NewScene be loaded and rendered on the screen.
+Inside the Load method, it was created a **MySprite** instance. **MySprite** is the class responsable for store all the data needed to render a **Texture2D** on screen. In this case, the instance is named *Mario* and has the **Texture2D** from file "Resources/Characters/mario". Below, you can see the example of how you use the created **MySprite** instance.
 
 ```````c#
 
@@ -88,7 +93,7 @@ private void CreateMarioActor() {
 }
 
 ```````
-Actors represent every object on the game. Every actor is controlled by one or more behaviours. In this code, we are creating a new actor called Mario, adding a MySpriteRenderer behaviour, positioning the actor on center of the screen, setting the Mario Sprite to be rendered on the screen, and most important: adding the Actor to the screen. Without this last step, the Mario Actor would be useless.
+Actors represent every object on the game. Every actor is controlled by one or more behaviours. In this code we are creating a new **MyActor** called *Mario* and adding a **MySpriteRenderer** behaviour to it. **MySpriteRenderer** is responsable for use the data stored on **MySprite** and the attributes from the behaviour **MyTransform**, to render the Texture with the correct position, rotation and scale on the screen. Another thing we are doing there (and the most important), is adding our Mario actor to the screen. Without this step, our actor would be useless.
 
 
 License
