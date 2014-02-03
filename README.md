@@ -96,6 +96,16 @@ private void CreateMarioActor() {
 Actors represent every object on the game. Every actor is controlled by one or more behaviours. In this code we are creating a new **MyActor** called *Mario* and adding a **MySpriteRenderer** behaviour to it. **MySpriteRenderer** is responsable for use the data stored on **MySprite** and the attributes from the behaviour **MyTransform**, to render the Texture with the correct position, rotation and scale on the screen. Another thing we are doing there (and the most important), is adding our Mario actor to the screen. Without this step, our actor would be useless.
 
 
+What's next?
+-------
+Check the Mine's wiki page for the documentation and my TODO list.
+
+
+Problems?
+------
+I am currently updating the old code written in 2011. The new code wasn't tested as it should be. If you have any problem using Mine, or if you have a fix for any bug, please don't be shy! Your opinion and experiences would help me more than you can imagine!
+
+
 License
 -----
 MIT
