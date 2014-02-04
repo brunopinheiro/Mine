@@ -5,9 +5,7 @@ namespace Mine {
 	
 	public abstract class MyRenderer : MyBehaviour {
 		
-		//TODO: Create the Text Renderer
-		
-		#region drawing properties
+        #region drawing properties
 		
 		public Color TintColor {
 			get { return this.GetColor(); }

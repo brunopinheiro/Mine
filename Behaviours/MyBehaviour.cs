@@ -5,8 +5,6 @@ using System.Runtime.CompilerServices;
 [assembly:InternalsVisibleTo("MyActor")]
 namespace Mine {
 	
-    //TODO: Create an enabled propertie, and make the MyCore check this propertie
-
 	public abstract class MyBehaviour {
 		
 		#region actor

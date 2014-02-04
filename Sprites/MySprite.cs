@@ -9,8 +9,6 @@ using Microsoft.Xna.Framework.Graphics;
 [assembly:InternalsVisibleTo("MyTexturePackerReader")]
 namespace Mine {
 	
-    //TODO: Destroy all the non persistent content when changing scene
-
 	public class MySprite {
 		
 		#region block public constructor

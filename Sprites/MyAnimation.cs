@@ -5,8 +5,6 @@ using System.Linq;
 using System.Xml.Serialization;
 using Microsoft.Xna.Framework.Content;
 
-//TODO: create a serializer
-
 namespace Mine {
 
     [Serializable] public class MyAnimationSprite {

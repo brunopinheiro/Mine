@@ -42,7 +42,7 @@ namespace Mine {
 		}
 		
 		private void LoadLoadingScene(MyScene nextScene) {
-			if(this.loadingScene != null) {
+            if(this.loadingScene != null) {
 				this.currentScene = this.loadingScene;
 				this.loadingScene.OnLoadEnding += this.LoadNextScene;
 				this.loadingScene.PrepareToLoad();
@@ -68,7 +68,6 @@ namespace Mine {
 		}
 		
 		private void ShowNextScene(MyScene unloadedScene) {
-			Console.WriteLine("Show next scene!");
 			this.currentScene = this.nextScene;
 			this.nextScene = null;
 			this.currentScene.Open();
