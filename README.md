@@ -75,7 +75,7 @@ MyDirector.Instance.OpenScene(new NewScene());
 
 ````````
 In this code above, we are making your NewScene be loaded and rendered on the screen.
-Inside the Load method, it was created a **MySprite** instance. **MySprite** is the class responsable for store all the data needed to render a **Texture2D** on screen. In this case, the instance is named *Mario* and has the **Texture2D** from file "Resources/Characters/mario". Below, you can see the example of how you use the created **MySprite** instance.
+Inside the Load method, it was created a **MySprite** instance. **MySprite** is the class responsible for store all the data needed to render a **Texture2D** on screen. In this case, the instance is named *Mario* and has the **Texture2D** from file "Resources/Characters/mario". Below, you can see the example of how you use the created **MySprite** instance.
 
 ```````c#
 
